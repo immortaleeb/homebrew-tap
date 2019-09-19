@@ -14,7 +14,7 @@ class Bashmarks < Formula
   end
 
   def caveats
-    <<-EOS.undent
+    <<-EOS.unindent
       Please add 'source #{libexec}/bashmarks.sh' to your .bashrc file
     EOS
   end
