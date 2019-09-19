@@ -14,9 +14,13 @@ class Bashmarks < Formula
   end
 
   def caveats
-    <<-EOS.unindent
+    unindent(<<-EOS)
       Please add 'source #{libexec}/bashmarks.sh' to your .bashrc file
     EOS
+  end
+
+  def unindent(s)
+    s.gsub(/^#{s.scan(/^[ \t]+(?=\S)/).min}/, '')
   end
 
   test do
